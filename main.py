@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QDesktopWidget
+from PyQt5.QtWidgets import QApplication, QWidget, QDesktopWidget, QMessageBox
 from PyQt5.QtGui import QPainter, QColor, QMouseEvent, QFont
 from PyQt5.QtCore import Qt, QPoint, QRect
 from random_word import RandomWords
@@ -7,7 +7,6 @@ from random_word import RandomWords
 from word_manager import WordManager
 from utils import get_contrasting_text_color
 from config_loader import load_config
-from PyQt5.QtWidgets import QMessageBox
 
 class TypingWindow(QWidget):
     def __init__(self):
@@ -29,7 +28,7 @@ class TypingWindow(QWidget):
 
         # 添加关闭按钮区域
         self.close_button_rect = QRect(
-            self.white_rect.right() ,
+            self.white_rect.right() - 20,
             self.white_rect.top(),
             20,
             self.white_rect.height()
@@ -38,9 +37,11 @@ class TypingWindow(QWidget):
         self.centerOnScreen()
 
         config = load_config()
+
+        # 如果未填写翻译配置，提醒但不退出程序
         if not config.get("baidu", {}).get("appid") or not config["baidu"].get("secret"):
-            QMessageBox.critical(None, "配置错误", "未填写百度翻译配置，请前往 config.json 填写 appid 和 secret！")
-            sys.exit(1)
+            QMessageBox.warning(self, "配置提示", "未填写百度翻译配置，翻译功能将不可用。\n请前往 config.json 填写 appid 和 secret。")
+
         self.word_mgr = WordManager(RandomWords(), config)
         self.word_mgr.load_new_word()
 
