@@ -2,6 +2,8 @@
 
 这是一个使用 PyQt5 构建的简洁打字练习应用，灵感来源于「寿司打」。支持英文单词输入、即时反馈、自动翻译等功能，适合练习打字和英语词汇记忆。
 
+[GitHub](https://github.com/RinKokawa/python-susida) [Gitee](https://gitee.com/rinkokawa/python-susida)
+
 ---
 
 ## 🧩 功能特点
