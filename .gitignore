@@ -1,0 +1,79 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# PyInstaller bundle output
+dist/
+build/
+*.spec
+
+# Packaging
+*.egg-info/
+.eggs/
+*.manifest
+*.bak
+*.old
+*.tmp
+*.temp
+
+# Logs & runtime files
+*.log
+*.out
+*.err
+*.pid
+*.db-journal
+
+# Test/coverage
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+htmlcov/
+
+# OS system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Config / Secrets
+.env
+.env.local
+config.json 
+
+
+# Others
+pip-log.txt
+pip-delete-this-directory.txt
+
+# UI auto-generated Qt files (if using Qt Designer)
+*.ui.py
+
+# Backup
+*.orig
+*.swp
+*.swo
+*.bak
