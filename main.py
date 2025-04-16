@@ -8,6 +8,7 @@ from word_manager import WordManager
 from utils import get_contrasting_text_color
 from config_loader import load_config
 from theme_config import load_theme
+from font_selector import FontSelector
 
 class TypingWindow(QWidget):
     def __init__(self):
@@ -19,6 +20,7 @@ class TypingWindow(QWidget):
 
         self._dragging = False
         self._drag_position = QPoint()
+        self.font_selector = None
 
         self.white_rect = QRect(
             (self.width() - 200) // 2,
@@ -31,6 +33,13 @@ class TypingWindow(QWidget):
             self.white_rect.right() - 20,
             self.white_rect.top(),
             20,
+            self.white_rect.height()
+        )
+
+        self.font_button_rect = QRect(
+            self.white_rect.left(),
+            self.white_rect.top(),
+            60,
             self.white_rect.height()
         )
 
@@ -66,6 +75,14 @@ class TypingWindow(QWidget):
         close_font = QFont("Arial", 10)
         painter.setFont(close_font)
         painter.drawText(self.close_button_rect, Qt.AlignCenter, "X")
+
+        painter.setBrush(QColor(100, 100, 255))
+        painter.setPen(Qt.NoPen)
+        painter.drawRect(self.font_button_rect)
+        painter.setPen(QColor(255, 255, 255))
+        font_btn_font = QFont("Arial", 10)
+        painter.setFont(font_btn_font)
+        painter.drawText(self.font_button_rect, Qt.AlignCenter, "字体")
 
         word_font_conf = self.theme["word_font"]
         word_font = QFont(word_font_conf["family"], word_font_conf["size"])
@@ -121,7 +138,11 @@ class TypingWindow(QWidget):
             if self.close_button_rect.contains(event.pos()):
                 self.close()
                 return
-            if self.white_rect.contains(event.pos()):
+            elif self.font_button_rect.contains(event.pos()):
+                self.font_selector = FontSelector()
+                self.font_selector.show()
+                return
+            elif self.white_rect.contains(event.pos()):
                 self._dragging = True
                 self._drag_position = event.globalPos() - self.frameGeometry().topLeft()
                 event.accept()
@@ -134,6 +155,8 @@ class TypingWindow(QWidget):
     def mouseReleaseEvent(self, event: QMouseEvent):
         if event.button() == Qt.LeftButton:
             self._dragging = False
+            self.theme = load_theme()
+            self.update()
             event.accept()
 
 if __name__ == '__main__':
