@@ -7,6 +7,7 @@ from random_word import RandomWords
 from word_manager import WordManager
 from utils import get_contrasting_text_color
 from config_loader import load_config
+from theme_config import load_theme
 
 class TypingWindow(QWidget):
     def __init__(self):
@@ -26,7 +27,6 @@ class TypingWindow(QWidget):
             20
         )
 
-        # 添加关闭按钮区域
         self.close_button_rect = QRect(
             self.white_rect.right() - 20,
             self.white_rect.top(),
@@ -37,8 +37,8 @@ class TypingWindow(QWidget):
         self.centerOnScreen()
 
         config = load_config()
+        self.theme = load_theme()
 
-        # 如果未填写翻译配置，提醒但不退出程序
         if not config.get("baidu", {}).get("appid") or not config["baidu"].get("secret"):
             QMessageBox.warning(self, "配置提示", "未填写百度翻译配置，翻译功能将不可用。\n请前往 config.json 填写 appid 和 secret。")
 
@@ -55,22 +55,22 @@ class TypingWindow(QWidget):
 
     def paintEvent(self, event):
         painter = QPainter(self)
-
         bg_color = QColor(255, 255, 255)
         painter.setBrush(bg_color)
         painter.setPen(Qt.NoPen)
         painter.drawRect(self.white_rect)
 
-        # 绘制关闭按钮
         painter.setBrush(QColor(220, 50, 50))
         painter.drawRect(self.close_button_rect)
         painter.setPen(QColor(255, 255, 255))
-        font = QFont("Arial", 10)
-        painter.setFont(font)
+        close_font = QFont("Arial", 10)
+        painter.setFont(close_font)
         painter.drawText(self.close_button_rect, Qt.AlignCenter, "X")
 
-        font = QFont("Arial", 16)
-        painter.setFont(font)
+        word_font_conf = self.theme["word_font"]
+        word_font = QFont(word_font_conf["family"], word_font_conf["size"])
+        word_font.setBold(word_font_conf.get("bold", False))
+        painter.setFont(word_font)
 
         word = self.word_mgr.get_current_word()
         statuses = self.word_mgr.get_status_list()
@@ -87,12 +87,14 @@ class TypingWindow(QWidget):
                 painter.setPen(QColor(200, 0, 0))
             else:
                 painter.setPen(normal_color)
-
             painter.drawText(x + i * 16, y, char)
 
-        painter.setPen(QColor(50, 50, 50))
-        trans_font = QFont("Arial", 12)
+        trans_font_conf = self.theme["translation_font"]
+        trans_font = QFont(trans_font_conf["family"], trans_font_conf["size"])
+        trans_font.setBold(trans_font_conf.get("bold", False))
         painter.setFont(trans_font)
+
+        painter.setPen(QColor(50, 50, 50))
         painter.drawText(
             self.white_rect.left(),
             self.white_rect.bottom() + 20,
