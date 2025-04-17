@@ -9,6 +9,8 @@ from utils import get_contrasting_text_color
 from config_loader import load_config
 from theme_config import load_theme
 from font_selector import FontSelector
+from word_source import JsonWordSource
+from source_selector import SourceSelector
 
 class TypingWindow(QWidget):
     def __init__(self):
@@ -21,6 +23,8 @@ class TypingWindow(QWidget):
         self._dragging = False
         self._drag_position = QPoint()
         self.font_selector = None
+        self.source_selector = None
+        self.current_source_type = "json"
 
         self.white_rect = QRect(
             (self.width() - 200) // 2,
@@ -43,6 +47,13 @@ class TypingWindow(QWidget):
             self.white_rect.height()
         )
 
+        self.source_button_rect = QRect(
+            self.white_rect.left() + 65,
+            self.white_rect.top(),
+            60,
+            self.white_rect.height()
+        )
+
         self.centerOnScreen()
 
         config = load_config()
@@ -51,8 +62,17 @@ class TypingWindow(QWidget):
         if not config.get("baidu", {}).get("appid") or not config["baidu"].get("secret"):
             QMessageBox.warning(self, "配置提示", "未填写百度翻译配置，翻译功能将不可用。\n请前往 config.json 填写 appid 和 secret。")
 
-        self.word_mgr = WordManager(RandomWords(), config)
+        self.init_word_manager(self.current_source_type, config)
+
+    def init_word_manager(self, source_type, config):
+        if source_type == "random":
+            self.word_mgr = WordManager(RandomWords(), config)
+        else:
+            self.word_mgr = WordManager(JsonWordSource(), config)
+
         self.word_mgr.load_new_word()
+        self.current_source_type = source_type
+        self.update()
 
     def centerOnScreen(self):
         screen = QDesktopWidget().screenGeometry()
@@ -83,6 +103,13 @@ class TypingWindow(QWidget):
         font_btn_font = QFont("Arial", 10)
         painter.setFont(font_btn_font)
         painter.drawText(self.font_button_rect, Qt.AlignCenter, "字体")
+
+        painter.setBrush(QColor(100, 200, 100))
+        painter.setPen(Qt.NoPen)
+        painter.drawRect(self.source_button_rect)
+        painter.setPen(QColor(255, 255, 255))
+        painter.setFont(QFont("Arial", 10))
+        painter.drawText(self.source_button_rect, Qt.AlignCenter, "词源")
 
         word_font_conf = self.theme["word_font"]
         word_font = QFont(word_font_conf["family"], word_font_conf["size"])
@@ -141,6 +168,10 @@ class TypingWindow(QWidget):
             elif self.font_button_rect.contains(event.pos()):
                 self.font_selector = FontSelector()
                 self.font_selector.show()
+                return
+            elif self.source_button_rect.contains(event.pos()):
+                self.source_selector = SourceSelector(self.init_word_manager)
+                self.source_selector.show()
                 return
             elif self.white_rect.contains(event.pos()):
                 self._dragging = True

@@ -61,6 +61,8 @@ fonts/*
 
 # Optional resources folder
 resources/*
+vocabulary/*
+
 
 # Other temp / backup
 *.tmp

@@ -1,11 +1,11 @@
-import random
-from utils import baidu_translate
+# word_manager.py
+from PyQt5.QtCore import QTimer
 
 class WordManager:
-    def __init__(self, generator, config):
-        self.generator = generator
-        self.config = config
-        self.word = ''
+    def __init__(self, source, config=None):
+        self.generator = source
+        self.config = config or {}
+        self.word = ""
         self.current_index = 0
         self.status_list = []
         self.translation = ""
@@ -13,35 +13,17 @@ class WordManager:
     def load_new_word(self):
         while True:
             word = self.generator.get_random_word()
-            if word and word.isalpha() and 3 <= len(word) <= 8:
+            if word and word.isalpha() and 3 <= len(word) <= 15:
                 self.word = word.lower()
                 break
-
-        print("[DEBUG] 当前单词：", self.word)
-
-        if self.word and 'baidu' in self.config:
-            baidu_conf = self.config['baidu']
-            appid = baidu_conf.get('appid')
-            secret = baidu_conf.get('secret')
-            self.translation = baidu_translate(self.word, appid, secret)
-        else:
-            self.translation = "(无效词)"
 
         self.current_index = 0
         self.status_list = ['default'] * len(self.word)
 
-    def process_input(self, key: str):
-        if self.current_index >= len(self.word):
-            return False, False
-
-        expected = self.word[self.current_index]
-        if key == expected:
-            self.status_list[self.current_index] = 'correct'
-            self.current_index += 1
-            return True, self.current_index >= len(self.word)
+        if hasattr(self.generator, 'get_translation'):
+            self.translation = self.generator.get_translation(self.word)
         else:
-            self.status_list[self.current_index] = 'wrong'
-            return False, False
+            self.translation = "(暂无翻译)"
 
     def get_current_word(self):
         return self.word
@@ -51,3 +33,18 @@ class WordManager:
 
     def get_translation(self):
         return self.translation
+
+    def process_input(self, char):
+        if self.current_index >= len(self.word):
+            return False, False
+
+        expected = self.word[self.current_index]
+        if char == expected:
+            self.status_list[self.current_index] = 'correct'
+            self.current_index += 1
+            if self.current_index >= len(self.word):
+                return True, True  # 正确并完成
+            return True, False     # 正确但未完成
+        else:
+            self.status_list[self.current_index] = 'wrong'
+            return False, False
