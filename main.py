@@ -170,7 +170,7 @@ class TypingWindow(QWidget):
                 self.font_selector.show()
                 return
             elif self.source_button_rect.contains(event.pos()):
-                self.source_selector = SourceSelector(self.init_word_manager)
+                self.source_selector = SourceSelector(lambda source_type: self.init_word_manager(source_type, load_config()))
                 self.source_selector.show()
                 return
             elif self.white_rect.contains(event.pos()):
