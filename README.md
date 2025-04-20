@@ -130,6 +130,13 @@ python main.py
 
 ---
 
+## 🙏 特别感谢
+
+- 📘 本项目使用的英文词库结构与示例数据部分参考自 [@KyleBing/english-vocabulary](https://github.com/KyleBing/english-vocabulary) 项目，  
+  感谢其无私分享高质量的英文单词文档与通用数据结构。
+
+---
+
 ## 📄 License
 
 MIT License
