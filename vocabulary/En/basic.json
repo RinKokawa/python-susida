@@ -1,0 +1,881 @@
+[
+    {
+        "word": "act",
+        "translations": [
+            {
+                "translation": "表演；举动；起作用",
+                "type": "v"
+            },
+            {
+                "translation": "行为，法令；一幕",
+                "type": "n"
+            }
+        ],
+        "phrases": [
+            {
+                "phrase": "act as",
+                "translation": "担当"
+            },
+            {
+                "phrase": "act on",
+                "translation": "对…起作用；按照…行事"
+            },
+            {
+                "phrase": "act in",
+                "translation": "扮演；在…方面行动"
+            },
+            {
+                "phrase": "act like",
+                "translation": "举止像..."
+            },
+            {
+                "phrase": "act for",
+                "translation": "v. 代理"
+            },
+            {
+                "phrase": "in act",
+                "translation": "[古语]即将，正要(与to和不定式连用)"
+            },
+            {
+                "phrase": "speech act",
+                "translation": "言语行为"
+            },
+            {
+                "phrase": "act out",
+                "translation": "把…表演出来；把…付诸行动"
+            },
+            {
+                "phrase": "act with",
+                "translation": "以…方式行事"
+            },
+            {
+                "phrase": "act upon",
+                "translation": "对…起作用；按照…行事"
+            },
+            {
+                "phrase": "act against",
+                "translation": "vt. 违反"
+            },
+            {
+                "phrase": "in the act of",
+                "translation": "正在做…时"
+            },
+            {
+                "phrase": "legal act",
+                "translation": "法律行为"
+            },
+            {
+                "phrase": "education act",
+                "translation": "教育法"
+            },
+            {
+                "phrase": "juristic act",
+                "translation": "法律行为；法律行律"
+            },
+            {
+                "phrase": "criminal act",
+                "translation": "罪行，犯罪行为"
+            },
+            {
+                "phrase": "act of god",
+                "translation": "天灾；不可抗力"
+            },
+            {
+                "phrase": "act accordingly",
+                "translation": "核办"
+            },
+            {
+                "phrase": "balancing act",
+                "translation": "平衡做法；协调"
+            },
+            {
+                "phrase": "illegal act",
+                "translation": "不法行为，非法行为"
+            }
+        ]
+    },
+    {
+        "word": "action",
+        "translations": [
+            {
+                "translation": "行动，动作；作用；运转；行为；战斗",
+                "type": "n"
+            }
+        ],
+        "phrases": [
+            {
+                "phrase": "take action",
+                "translation": "采取行动；提出诉讼"
+            },
+            {
+                "phrase": "action on",
+                "translation": "对…的作用"
+            },
+            {
+                "phrase": "in action",
+                "translation": "在活动；在运转"
+            },
+            {
+                "phrase": "action plan",
+                "translation": "行动计划；行动方案"
+            },
+            {
+                "phrase": "mechanism of action",
+                "translation": "作用机制；作用机理"
+            },
+            {
+                "phrase": "course of action",
+                "translation": "做法；行动步骤"
+            },
+            {
+                "phrase": "legal action",
+                "translation": "法律诉讼"
+            },
+            {
+                "phrase": "action research",
+                "translation": "行动研究；行为研究；动作研究"
+            },
+            {
+                "phrase": "civil action",
+                "translation": "n. 民事诉讼"
+            },
+            {
+                "phrase": "pharmacological action",
+                "translation": "药理作用"
+            },
+            {
+                "phrase": "corrective action",
+                "translation": "n. 校正动作"
+            },
+            {
+                "phrase": "administrative action",
+                "translation": "行政诉讼；行政裁定"
+            },
+            {
+                "phrase": "joint action",
+                "translation": "联合行动；[机]接合动作；接合作用"
+            },
+            {
+                "phrase": "collective action",
+                "translation": "集体行动；集体行为"
+            },
+            {
+                "phrase": "combined action",
+                "translation": "共同作用；联合行动；复合作用"
+            },
+            {
+                "phrase": "direct action",
+                "translation": "直接行动；直接作用"
+            },
+            {
+                "phrase": "action potential",
+                "translation": "动作电位；动诅位"
+            },
+            {
+                "phrase": "out of action",
+                "translation": "损坏；不运转；失去作用"
+            },
+            {
+                "phrase": "control action",
+                "translation": "控制作用；控制动作"
+            },
+            {
+                "phrase": "disciplinary action",
+                "translation": "纪律处分；训练活动"
+            }
+        ]
+    },
+    {
+        "word": "activate",
+        "translations": [
+            {
+                "translation": "启动，激活；驱动，驱使；使开始起作用",
+                "type": "v"
+            }
+        ]
+    },
+    {
+        "word": "active",
+        "translations": [
+            {
+                "translation": "活跃的，敏捷的，积极的；在活动中的",
+                "type": "adj"
+            }
+        ],
+        "phrases": [
+            {
+                "phrase": "active in",
+                "translation": "积极于"
+            },
+            {
+                "phrase": "active role",
+                "translation": "积极任务；活跃角色"
+            },
+            {
+                "phrase": "active part",
+                "translation": "积极的作用；能动部分，主动部分"
+            },
+            {
+                "phrase": "active power",
+                "translation": "有功（有效）功率"
+            },
+            {
+                "phrase": "active carbon",
+                "translation": "活性炭；活性炭黑"
+            },
+            {
+                "phrase": "surface active",
+                "translation": "表面活性的"
+            },
+            {
+                "phrase": "active ingredient",
+                "translation": "有效成分；活性组分"
+            },
+            {
+                "phrase": "active participation",
+                "translation": "主动参与；积极参加"
+            },
+            {
+                "phrase": "active agent",
+                "translation": "活性剂"
+            },
+            {
+                "phrase": "active component",
+                "translation": "活性组分；有效元件；作用分量"
+            },
+            {
+                "phrase": "surface active agent",
+                "translation": "表面活性剂"
+            },
+            {
+                "phrase": "active service",
+                "translation": "现役"
+            },
+            {
+                "phrase": "active oxygen",
+                "translation": "活性氧"
+            },
+            {
+                "phrase": "active fault",
+                "translation": "活动断裂；活性断层"
+            },
+            {
+                "phrase": "active learning",
+                "translation": "主动学习；积极学习"
+            },
+            {
+                "phrase": "active substance",
+                "translation": "活性物质；放射性物质；有效物质"
+            },
+            {
+                "phrase": "active suspension",
+                "translation": "主动制导悬架系统（一种由计算机控制的机动车悬架系统）"
+            },
+            {
+                "phrase": "active material",
+                "translation": "[核物]活性物质，放射性材料"
+            },
+            {
+                "phrase": "active network",
+                "translation": "有源网络"
+            },
+            {
+                "phrase": "active member",
+                "translation": "积极成员；活跃会员"
+            }
+        ]
+    },
+    {
+        "word": "actress",
+        "translations": [
+            {
+                "translation": "女演员",
+                "type": "n"
+            }
+        ]
+    },
+    {
+        "word": "actual",
+        "translations": [
+            {
+                "translation": "实际的；现实的，真实的，目前的",
+                "type": "adj"
+            }
+        ],
+        "phrases": [
+            {
+                "phrase": "actual situation",
+                "translation": "实际情况"
+            },
+            {
+                "phrase": "actual strength",
+                "translation": "实际强度"
+            },
+            {
+                "phrase": "actual condition",
+                "translation": "实际情况；实际状况"
+            },
+            {
+                "phrase": "actual production",
+                "translation": "生产实绩；实际产量"
+            },
+            {
+                "phrase": "actual effect",
+                "translation": "实证法；实际效应"
+            },
+            {
+                "phrase": "actual state",
+                "translation": "现实状态，实际状况"
+            },
+            {
+                "phrase": "actual use",
+                "translation": "实际使用"
+            },
+            {
+                "phrase": "actual demand",
+                "translation": "实际需求"
+            },
+            {
+                "phrase": "actual value",
+                "translation": "实际价值；实际指标"
+            },
+            {
+                "phrase": "actual measurement",
+                "translation": "实测；实物测量"
+            },
+            {
+                "phrase": "actual life",
+                "translation": "实际寿命；有效寿命"
+            },
+            {
+                "phrase": "your actual",
+                "translation": "[口语]原产的；真正的"
+            },
+            {
+                "phrase": "actual cost",
+                "translation": "实际成本；额外费用"
+            },
+            {
+                "phrase": "actual need",
+                "translation": "实际需要"
+            },
+            {
+                "phrase": "actual practice",
+                "translation": "实际应用"
+            },
+            {
+                "phrase": "actual result",
+                "translation": "实际结果"
+            },
+            {
+                "phrase": "actual performance",
+                "translation": "n. 实际经济指标"
+            },
+            {
+                "phrase": "actual test",
+                "translation": "实际试验"
+            },
+            {
+                "phrase": "actual number",
+                "translation": "n. 实数，实际数量"
+            },
+            {
+                "phrase": "actual size",
+                "translation": "实际尺寸；实际大小"
+            }
+        ]
+    },
+    {
+        "word": "interact",
+        "translations": [
+            {
+                "translation": "互相作用,互相影响",
+                "type": "v"
+            }
+        ],
+        "phrases": [
+            {
+                "phrase": "interact with",
+                "translation": "与……相互作用"
+            },
+            {
+                "phrase": "interact on",
+                "translation": "作用；影响；制约"
+            }
+        ]
+    },
+    {
+        "word": "radioactive",
+        "translations": [
+            {
+                "translation": "放射性,放射引起的",
+                "type": "adj"
+            }
+        ],
+        "phrases": [
+            {
+                "phrase": "radioactive waste",
+                "translation": "放射性废弃物"
+            },
+            {
+                "phrase": "radioactive isotope",
+                "translation": "放射性同位素"
+            },
+            {
+                "phrase": "radioactive material",
+                "translation": "放射性物质；放射性材料"
+            },
+            {
+                "phrase": "radioactive source",
+                "translation": "[核子学]放射源"
+            },
+            {
+                "phrase": "radioactive contamination",
+                "translation": "放射性污染"
+            },
+            {
+                "phrase": "radioactive decay",
+                "translation": "[物]放射性衰变"
+            },
+            {
+                "phrase": "radioactive element",
+                "translation": "放射性元素"
+            },
+            {
+                "phrase": "radioactive substance",
+                "translation": "放射性物质"
+            },
+            {
+                "phrase": "radioactive fallout",
+                "translation": "放射性尘降物"
+            },
+            {
+                "phrase": "radioactive tracer",
+                "translation": "放射性示踪剂，放射性指示剂"
+            },
+            {
+                "phrase": "radioactive waste management",
+                "translation": "放射性废物管理"
+            }
+        ]
+    },
+    {
+        "word": "react",
+        "translations": [
+            {
+                "translation": "反应,起作用;(against)反对,起反作用",
+                "type": "v"
+            }
+        ],
+        "phrases": [
+            {
+                "phrase": "react on",
+                "translation": "v. 起作用于；对…有影响"
+            },
+            {
+                "phrase": "react against",
+                "translation": "反抗；反对；起反作用"
+            }
+        ]
+    },
+    {
+        "word": "transaction",
+        "translations": [
+            {
+                "translation": "办理,处理;交易,事务;(pl.)会报,学报",
+                "type": "n"
+            }
+        ],
+        "phrases": [
+            {
+                "phrase": "transaction cost",
+                "translation": "交易成本，交易费用"
+            },
+            {
+                "phrase": "transaction processing",
+                "translation": "[计]事务处理"
+            },
+            {
+                "phrase": "business transaction",
+                "translation": "商业交易；[经]经济业务"
+            },
+            {
+                "phrase": "transaction volume",
+                "translation": "交易量"
+            },
+            {
+                "phrase": "market transaction",
+                "translation": "市场交易"
+            },
+            {
+                "phrase": "transaction data",
+                "translation": "事务数据"
+            },
+            {
+                "phrase": "financial transaction",
+                "translation": "金融业务；财务交易，财务事项"
+            },
+            {
+                "phrase": "connected transaction",
+                "translation": "关联交易"
+            },
+            {
+                "phrase": "transaction tax",
+                "translation": "交易税"
+            },
+            {
+                "phrase": "transaction services",
+                "translation": "事务处理服务；事务处理业务"
+            },
+            {
+                "phrase": "exchange transaction",
+                "translation": "外汇交易"
+            },
+            {
+                "phrase": "cash transaction",
+                "translation": "现金交易"
+            },
+            {
+                "phrase": "commercial transaction",
+                "translation": "买卖，交易；商业行为"
+            },
+            {
+                "phrase": "credit transaction",
+                "translation": "n. 信贷交易"
+            },
+            {
+                "phrase": "transaction value",
+                "translation": "成交价格；交易价"
+            },
+            {
+                "phrase": "spot transaction",
+                "translation": "现货交易"
+            },
+            {
+                "phrase": "futures transaction",
+                "translation": "期货交易；先物取引"
+            },
+            {
+                "phrase": "transaction processing system",
+                "translation": "[计]事务处理系统"
+            },
+            {
+                "phrase": "sales transaction",
+                "translation": "交易；销售事务"
+            },
+            {
+                "phrase": "related party transaction",
+                "translation": "关联方交易；集团内交易；内幕交易"
+            }
+        ]
+    },
+    {
+        "word": "character",
+        "translations": [
+            {
+                "translation": "性格,品质,特性;人物,角色;字符,(汉)字",
+                "type": "n"
+            }
+        ],
+        "phrases": [
+            {
+                "phrase": "chinese character",
+                "translation": "汉字"
+            },
+            {
+                "phrase": "moral character",
+                "translation": "品德"
+            },
+            {
+                "phrase": "main character",
+                "translation": "主要人物；主要角色"
+            },
+            {
+                "phrase": "individual character",
+                "translation": "个性；单字"
+            },
+            {
+                "phrase": "character recognition",
+                "translation": "[计]字符识别"
+            },
+            {
+                "phrase": "in character",
+                "translation": "相称；适合"
+            },
+            {
+                "phrase": "general character",
+                "translation": "一般特征；一般品质；通用字符"
+            },
+            {
+                "phrase": "good character",
+                "translation": "良好的品性；高品质"
+            },
+            {
+                "phrase": "special character",
+                "translation": "特殊字符"
+            },
+            {
+                "phrase": "national character",
+                "translation": "民族性；国民性格"
+            },
+            {
+                "phrase": "character set",
+                "translation": "n. 字符集"
+            },
+            {
+                "phrase": "personal character",
+                "translation": "个性；个人性格"
+            },
+            {
+                "phrase": "character education",
+                "translation": "品格教育，品德教育"
+            },
+            {
+                "phrase": "specific character",
+                "translation": "特点；种特征；特有性格"
+            },
+            {
+                "phrase": "distribution character",
+                "translation": "分布特性"
+            },
+            {
+                "phrase": "mechanical character",
+                "translation": "机械性能；机械特性"
+            },
+            {
+                "phrase": "leading character",
+                "translation": "主角"
+            },
+            {
+                "phrase": "character development",
+                "translation": "品德形成，性状发育"
+            },
+            {
+                "phrase": "character string",
+                "translation": "n. 字符串"
+            },
+            {
+                "phrase": "morphological character",
+                "translation": "形态特征，形态性状"
+            }
+        ]
+    },
+    {
+        "word": "characteristic",
+        "translations": [
+            {
+                "translation": "特有的,独特的",
+                "type": "adj"
+            },
+            {
+                "translation": "特征,特性",
+                "type": "n"
+            }
+        ],
+        "phrases": [
+            {
+                "phrase": "characteristic of",
+                "translation": "特有的；表示…特性的"
+            },
+            {
+                "phrase": "dynamic characteristic",
+                "translation": "动态特性；负载特性曲线"
+            },
+            {
+                "phrase": "characteristic curve",
+                "translation": "特性曲线；特征曲线"
+            },
+            {
+                "phrase": "technical characteristic",
+                "translation": "技术特性"
+            },
+            {
+                "phrase": "flow characteristic",
+                "translation": "流动特性；量特性；怜特性"
+            },
+            {
+                "phrase": "frequency characteristic",
+                "translation": "频率特性"
+            },
+            {
+                "phrase": "characteristic value",
+                "translation": "特征值，特性值"
+            },
+            {
+                "phrase": "performance characteristic",
+                "translation": "工作特性"
+            },
+            {
+                "phrase": "load characteristic",
+                "translation": "负荷特性；负载特性；负载特性曲线"
+            },
+            {
+                "phrase": "quality characteristic",
+                "translation": "质量特性；品质特性"
+            },
+            {
+                "phrase": "characteristic equation",
+                "translation": "特征方程；特性方程"
+            },
+            {
+                "phrase": "response characteristic",
+                "translation": "[计]响应特性"
+            },
+            {
+                "phrase": "operating characteristic",
+                "translation": "运行特性"
+            },
+            {
+                "phrase": "characteristic impedance",
+                "translation": "特性阻抗"
+            },
+            {
+                "phrase": "physical characteristic",
+                "translation": "物理特性；体型特征"
+            },
+            {
+                "phrase": "static characteristic",
+                "translation": "静态特性"
+            },
+            {
+                "phrase": "transfer characteristic",
+                "translation": "传输特性；（显象管）信号-光特性"
+            },
+            {
+                "phrase": "characteristic function",
+                "translation": "特征函数"
+            },
+            {
+                "phrase": "characteristic line",
+                "translation": "特性线"
+            },
+            {
+                "phrase": "characteristic feature",
+                "translation": "性能特点"
+            }
+        ]
+    },
+    {
+        "word": "characterize",
+        "translations": [
+            {
+                "translation": "表示…的特性;描述…特性",
+                "type": "v"
+            }
+        ]
+    },
+    {
+        "word": "agency",
+        "translations": [
+            {
+                "translation": "代理(处)；代办处；[美](政府的)机关，厅",
+                "type": "n"
+            }
+        ],
+        "phrases": [
+            {
+                "phrase": "news agency",
+                "translation": "通讯社；新闻通讯社"
+            },
+            {
+                "phrase": "xinhua news agency",
+                "translation": "新华社"
+            },
+            {
+                "phrase": "travel agency",
+                "translation": "旅行社"
+            },
+            {
+                "phrase": "agency business",
+                "translation": "代理业务"
+            },
+            {
+                "phrase": "advertising agency",
+                "translation": "广告公司；广告商"
+            },
+            {
+                "phrase": "government agency",
+                "translation": "政府机关"
+            },
+            {
+                "phrase": "sole agency",
+                "translation": "独家经理；唯一代理"
+            },
+            {
+                "phrase": "space agency",
+                "translation": "航天局；宇航局"
+            },
+            {
+                "phrase": "shipping agency",
+                "translation": "船舶代理；船舶代理公司；航运公司"
+            },
+            {
+                "phrase": "environmental protection agency",
+                "translation": "（美）环境保护署（略作EPA）"
+            },
+            {
+                "phrase": "environmental protection agency (epa)",
+                "translation": "环保署"
+            },
+            {
+                "phrase": "agency agreement",
+                "translation": "[经]代理协议；通汇契约"
+            },
+            {
+                "phrase": "agency cost",
+                "translation": "代理成本"
+            },
+            {
+                "phrase": "intelligence agency",
+                "translation": "情报局；情报单位"
+            },
+            {
+                "phrase": "real estate agency",
+                "translation": "房地产公司"
+            },
+            {
+                "phrase": "insurance agency",
+                "translation": "保险代理机构；保险代理行；保险代理公司"
+            },
+            {
+                "phrase": "agency theory",
+                "translation": "代理理论"
+            },
+            {
+                "phrase": "exclusive agency",
+                "translation": "独家代理商"
+            },
+            {
+                "phrase": "employment agency",
+                "translation": "职业介绍所"
+            },
+            {
+                "phrase": "regulatory agency",
+                "translation": "[计]管理机构；调节机构"
+            }
+        ]
+    },
+    {
+        "word": "agenda",
+        "translations": [
+            {
+                "translation": "议事日程，记事册",
+                "type": "n"
+            }
+        ],
+        "phrases": [
+            {
+                "phrase": "item on the agenda",
+                "translation": "议程项目"
+            },
+            {
+                "phrase": "hidden agenda",
+                "translation": "隐秘的议程；幕后的动机"
+            },
+            {
+                "phrase": "agenda setting",
+                "translation": "议题设定；议程设定"
+            }
+        ]
+    }
+]

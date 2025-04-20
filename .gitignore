@@ -61,9 +61,15 @@ fonts/*
 
 # Optional resources folder
 resources/*
-vocabulary/*
-data/*
 
+# Ignore all vocabulary files
+vocabulary/*
+!vocabulary/En/
+vocabulary/En/*
+!vocabulary/En/basic.json
+
+# Ignore all logs and per-day stats
+data/*
 
 # Other temp / backup
 *.tmp
