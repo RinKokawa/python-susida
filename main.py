@@ -1,3 +1,4 @@
+import os
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QDesktopWidget, QMessageBox
 from PyQt5.QtGui import QPainter, QColor, QMouseEvent, QFont
@@ -12,6 +13,10 @@ from font_selector import FontSelector
 from word_source import JsonWordSource
 from source_selector import SourceSelector
 
+from datetime import datetime
+from log_writer import LogWriter
+
+
 class TypingWindow(QWidget):
     def __init__(self):
         super().__init__()
@@ -24,7 +29,9 @@ class TypingWindow(QWidget):
         self._drag_position = QPoint()
         self.font_selector = None
         self.source_selector = None
-        self.current_source_type = "json"
+        # self.current_source_type = "json"
+        self.current_source_type = os.path.join("vocabulary", "En", "basic.json")
+
 
         self.white_rect = QRect(
             (self.width() - 200) // 2,
@@ -64,15 +71,23 @@ class TypingWindow(QWidget):
 
         self.init_word_manager(self.current_source_type, config)
 
+        # 新增log功能
+        self.log_writer = LogWriter()
+        self.word_start_time = None
+        self.typed_buffer = ""
+        self.correct_count = 0
+
+
     def init_word_manager(self, source_type, config):
         if source_type == "random":
             self.word_mgr = WordManager(RandomWords(), config)
         else:
-            self.word_mgr = WordManager(JsonWordSource(), config)
+            self.word_mgr = WordManager(JsonWordSource(path=source_type), config)
 
         self.word_mgr.load_new_word()
         self.current_source_type = source_type
         self.update()
+
 
     def centerOnScreen(self):
         screen = QDesktopWidget().screenGeometry()
@@ -155,10 +170,33 @@ class TypingWindow(QWidget):
         if not key:
             return
 
+        # 记录起始时间
+        if self.word_mgr.current_index == 0 and not self.word_start_time:
+            self.word_start_time = datetime.now()
+            self.typed_buffer = ""
+            self.correct_count = 0
+
+        self.typed_buffer += key
         success, finished = self.word_mgr.process_input(key)
-        if finished:
+
+        if success:
+            self.correct_count += 1
+
+        if finished and self.word_start_time:
+            self.log_writer.log_word(
+                word=self.word_mgr.get_current_word(),
+                start_time=self.word_start_time,
+                end_time=datetime.now(),
+                typed_chars=self.typed_buffer
+            )
+
+            self.word_start_time = None
+            self.typed_buffer = ""
+            self.correct_count = 0
             self.word_mgr.load_new_word()
+
         self.update()
+
 
     def mousePressEvent(self, event: QMouseEvent):
         if event.button() == Qt.LeftButton:
@@ -194,4 +232,7 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = TypingWindow()
     window.show()
-    sys.exit(app.exec_())
+    exit_code = app.exec_()
+    if hasattr(window, 'log_writer'):
+        window.log_writer.save()
+    sys.exit(exit_code)
